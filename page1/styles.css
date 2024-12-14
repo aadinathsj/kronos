@@ -1,0 +1,347 @@
+/* General body styling */
+body {
+    background-color: #181818; /* Set the background color to matte black */
+    color: #1DB954; /* Set the text color to Spotify green */
+    font-family: Arial, sans-serif; /* Use a sans-serif font for readability */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body content */
+}
+
+/* Header section styling */
+#header {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically center items within the header */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+#logo {
+    width: 50px; /* Set the logo width to match the title size */
+    height: auto; /* Maintain the aspect ratio of the logo */
+    margin-right: 15px; /* Add space between the logo and the title */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 36px; /* Set the font size for the title */
+    text-transform: uppercase; /* Convert the title text to uppercase */
+    text-align: center; /* Center the title text */
+    flex: 1; /* Allow the title to take up the remaining space in the header */
+}
+
+/* Fitcoin container styling */
+#fitcoin-container {
+    font-size: 18px; /* Set the font size for Fitcoin text */
+    font-weight: bold; /* Make the Fitcoin text bold */
+    background-color: #121212; /* Set a darker background color for the container */
+    padding: 10px 20px; /* Add padding inside the container */
+    border-radius: 25px; /* Round the corners of the container */
+    color: #1DB954; /* Set the text color to Spotify green */
+}
+
+/* Task manager section styling */
+#task-manager {
+    margin-bottom: 20px; /* Add space below the task manager section */
+}
+
+#task-form {
+    display: flex; /* Use flexbox to align the input and button horizontally */
+}
+
+#task-input {
+    flex: 1; /* Allow the input field to take up remaining space */
+    padding: 10px; /* Add padding inside the input field */
+    margin-right: 10px; /* Add space between the input field and the button */
+    border: 1px solid #1DB954; /* Set a green border for the input field */
+    border-radius: 5px; /* Round the corners of the input field */
+    background-color: #121212; /* Set the background color of the input field */
+    color: #1DB954; /* Set the text color to Spotify green */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px; /* Add padding inside buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Round the corners of buttons */
+    background-color: #1DB954; /* Set the button background color to Spotify green */
+    color: #fff; /* Set the text color to white */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+button:hover {
+    background-color: #148d41; /* Darken the button background color on hover */
+}
+
+button.delete {
+    padding: 10px 20px; /* Add padding inside buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Round the corners of buttons */
+    background-color: #b91d1d; /* Set the button background color to Spotify green */
+    color: #fff; /* Set the text color to white */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+button.delete:hover {
+    background-color: #701010; /* Darken the button background color on hover */
+}
+
+
+
+/* List styling */
+ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    background-color: #282828; /* Set a darker background color for each task */
+    padding: 10px; /* Add padding inside each task item */
+    margin-bottom: 5px; /* Add space below each task item */
+    border-radius: 5px; /* Round the corners of each task item */
+    display: flex; /* Use flexbox to align task content and buttons horizontally */
+    align-items: center; /* Vertically center the content within each task item */
+    justify-content: space-between; /* Distribute space between the content and buttons */
+    word-break: break-word; /* Break long words to prevent overflow */
+}
+
+/* Task content and button styling */
+.task-content {
+    flex: 1; /* Allow task content to take up remaining space */
+}
+
+/* Priority circle styling */
+.priority-circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Colors for priority levels */
+.priority-low {
+    background-color: green;
+}
+
+.priority-medium {
+    background-color: yellow;
+}
+
+.priority-high {
+    background-color: red;
+}
+
+/* Plan output section styling */
+#plan-output {
+    margin-top: 20px; /* Add space above the plan output section */
+    margin-bottom: 20px;
+}
+
+/* Stress tip output section styling */
+#tip-output {
+    margin-top: 10px; /* Add space above the stress tip output */
+    font-size: 15px; /* Set the font size for the stress tip text */
+}
+
+/* Progress bar styling */
+#progress-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px 0;
+    position: relative;
+}
+
+#progress-bar {
+    height: 25px;
+    width: 0; /* Start width at 0 */
+    background-color: #1DB954; /* Spotify green */
+    transition: width 0.5s ease-in-out; /* Smooth transition for width */
+    border-radius: 25px;
+    position: relative;
+}
+
+#progress-bar.complete {
+    animation: zoom 1s ease-in-out; /* Apply zoom animation when complete */
+}
+
+/* Priority select dropdown styling */
+#priority-select {
+    background-color: #1DB954; /* Spotify green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded edges */
+    padding: 5px 10px; /* Padding for spacing */
+    font-size: 13px; /* Font size for readability */
+    appearance: none; /* Remove default styling on select */
+    outline: none; /* Remove default focus outline */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 10px; /* Space between dropdown and input */
+}
+
+/* Optional: Add a custom arrow for the select */
+#priority-select::after {
+    content: '▼'; /* Arrow down */
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent the arrow from being interactive */
+}
+
+/* Styles for the task boxes and layout */
+.task-box {
+    background-color: #282828; /* Light grey background */
+    border-radius: 10px; /* Curved corners */
+    padding: 10px;
+    margin: 10px;
+    display: inline-block; /* Display boxes inline */
+    width: auto; /* Adjust width automatically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+.task-box:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Darken the button background color on hover */
+}
+
+.priority-circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle; /* Align circle with text */
+}
+
+.priority-low { background-color: green; } /* Color for low priority */
+.priority-medium { background-color: yellow; } /* Color for medium priority */
+.priority-high { background-color: red; } /* Color for high priority */
+
+.task-content {
+    display: inline-block;
+    vertical-align: middle; /* Align text with circle */
+}
+
+/* Styling for the plan output sections */
+#plan-output h3 {
+    margin-top: 20px;
+}
+
+#plan-output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Keyframes for zoom animation */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Logo and progress bar hover effects */
+.home-button:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.progress-bar:hover {
+    animation: bounce 0.5s ease;
+}
+/* Weather Widget Styling */
+.weather-widget {
+    background-color: #1e1e1e; /* Dark background for the widget */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Set a fixed width for the widget */
+    margin: 0 auto; /* Center the widget horizontally */
+    position: relative; /* Ensure the widget stays in place */
+}
+
+/* Weather widget title styling */
+.weather-widget h2 {
+    text-align: center;
+    color: #4caf50; /* Spotify green for the header */
+}
+
+/* Weather widget input styling */
+.weather-widget input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4caf50; /* Spotify green border */
+    margin-bottom: 10px;
+    background-color: #333; /* Dark background for input */
+    color: #ffffff; /* White text */
+}
+
+/* Weather widget button styling */
+.weather-widget button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4caf50; /* Spotify green */
+    color: #ffffff; /* White text */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.weather-widget button:hover {
+    background-color: #45a049; /* Slightly lighter green on hover */
+}
+
+/* Weather info and hourly forecast styling */
+.weather-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.temp-div {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+.hourly-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hourly-item {
+    background-color: #282828; /* Dark background for hourly items */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: calc(50% - 10px); /* Responsive width for hourly items */
+    text-align: center;
+}
+
