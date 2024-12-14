@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Kronos Task Manager</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header section containing the logo, title, and Fitcoin counter -->
+    <div id="header">
+        <!-- Logo image for Kronos, aligned next to the title -->
+        <a href="../index.html"><img id="logo" src="logo.png" alt="Kronos Logo" class="home-button"></a> 
+        
+        <!-- Title of the application -->
+        <h1>Kronos</h1>
+        
+        <!-- Container for the Fitcoin incentive system -->
+        <div id="fitcoin-container">
+            Fitcoin: <span id="fitcoin-value">0</span> <!-- Displays the current Fitcoin count -->
+        </div>
+    </div>
+
+    <!-- Progress bar container -->
+    <div id="progress-container" class="progress-bar">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Main task manager section -->
+    <div id="task-manager">
+        <!-- Form for adding new tasks -->
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Enter your task">
+            <select id="priority-select">
+                <option value="low">Least Important</option>
+                <option value="medium">Medium Important</option>
+                <option value="high">Most Important</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        
+        <!-- Unordered list to display tasks -->
+        <ul id="tasks"></ul>
+    </div>
+
+    <!-- Button to generate a daily action plan based on tasks -->
+    <button id="generate-plan">Generate Plan</button>
+
+    <!-- Div to output the generated action plan -->
+    <div id="plan-output"></div>
+
+
+    
+    <!-- Button to get a stress management tip -->
+    <button id="stress-tips">Get Stress Management Tip</button>
+    
+    <!-- Div to display the stress management tip -->
+    <div id="tip-output"></div>
+
+    <!-- Weather Forecast Widget -->
+    <div id="weather-widget" class="weather-widget">
+        <h2>Weather Forecast</h2>
+        <input type="text" id="city" placeholder="Enter city" />
+        <button id="get-weather">Get Weather</button>
+        
+        <!-- Sections for displaying weather information -->
+        <div id="weather-info" class="weather-info"></div>
+        <div id="temp-div" class="temp-div"></div>
+        <img id="weather-icon" class="weather-icon" src="" alt="Weather Icon" style="display:none;" />
+        <div id="hourly-forecast" class="hourly-forecast"></div>
+    </div>
+
+    <!-- Link to external JavaScript file for functionality -->
+    <script src="scripts.js"></script>
+</body>
+</html>
